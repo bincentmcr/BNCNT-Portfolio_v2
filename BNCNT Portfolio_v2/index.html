@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BNCNT Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Navigation toggler button -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom CSS -->
+  <script src="js/script.js"></script>
+</head>
+
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">BNCNT<span style="color: #007bff;">.</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#hero">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section id="hero" class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Text Content -->
+      <div class="col-md-6 text-section">
+        <h1>Hi, I'm <strong class="hero-name">Bincent De la Peña</strong></h1>
+        <h3 class="text-primary fw-bold">Graphic Artist / Illustrator</h3>
+        <p class="text-muted">Your vision. My creativity. Endless possibilities.</p>
+        <div class="mt-4">
+          <a href="#" class="btn btn-primary me-2">Hire Me</a>
+          <a href="#" class="btn btn-outline-primary">Let's Talk</a>
+        </div>
+        <div class="social-icons mt-4">
+          <a href="#" class="me-3 text-primary"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" class="me-3 text-primary"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#" class="text-primary"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="col-md-6 text-center">
+        <img src="assets/images/profile.jpg" alt="Profile Image" class="img-fluid rounded-circle hero-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Image Column -->
+      <div class="col-md-4 text-center mb-4 mb-md-0">
+        <img src="assets/images/about-profile.jpg" alt="Bincent De la Peña" class="img-fluid rounded shadow-sm" style="max-width: 280px;">
+      </div>
+      
+      <!-- Text Column -->
+      <div class="col-md-8">
+        <h5 class="text-primary mb-2">My Intro</h5>
+        <h2 class="mb-4 fw-bold">About Me</h2>
+        <p class="mb-4 text-muted" style="max-width: 600px;">
+          A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+        </p>
+        
+        <!-- Personal Info (aligned) -->
+        <dl class="row mb-3">
+          <dt class="col-sm-3 text-muted">Name:</dt>
+          <dd class="col-sm-8">Bincent De la Pena</dd>
+
+          <dt class="col-sm-3 text-muted">Date of birth:</dt>
+          <dd class="col-sm-8">October 20, 1999</dd>
+
+          <dt class="col-sm-3 text-muted">Address:</dt>
+          <dd class="col-sm-8">Alitagtag, Batangas, Philippines</dd>
+
+          <dt class="col-sm-3 text-muted">Zip code:</dt>
+          <dd class="col-sm-8">4205</dd>
+
+          <dt class="col-sm-3 text-muted">Email:</dt>
+          <dd class="col-sm-8">bincentmcr@gmail.com</dd>
+
+          <dt class="col-sm-3 text-muted">Phone:</dt>
+          <dd class="col-sm-8">+63906-201-8674</dd>
+        </dl>
+
+        <!-- Interests -->
+        <h6 class="fw-semibold text-primary mb-2">Interests</h6>
+        <p class="mb-0 text-muted">
+          <i class="fas fa-music me-1"></i>Music
+          <span class="mx-2">|</span>
+          <i class="fas fa-plane me-1"></i>Travel
+          <span class="mx-2">|</span>
+          <i class="fas fa-film me-1"></i>Movie
+          <span class="mx-2">|</span>
+          <i class="fas fa-football-ball me-1"></i>Sports
+          <span class="mx-2">|</span>
+          <i class="fas fa-gamepad me-1"></i>Gaming
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Education Section -->
+<section id="education" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Education</h2>
+    <ul class="list-unstyled">
+      <li class="mb-3">
+        <h5 class="mb-1">Bachelor of Fine Arts in Visual Communication</h5>
+        <p class="mb-0 text-muted">University of the Arts – 2020–2024</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Skills</h2>
+    <div class="row text-center">
+      <div class="col-md-3 mb-3">
+        <i class="fas fa-paint-brush fa-2x text-primary mb-2"></i>
+        <h6>Illustration</h6>
+      </div>
+      <div class="col-md-3 mb-3">
+        <i class="fas fa-vector-square fa-2x text-primary mb-2"></i>
+        <h6>Graphic Design</h6>
+      </div>
+      <div class="col-md-3 mb-3">
+        <i class="fas fa-photo-video fa-2x text-primary mb-2"></i>
+        <h6>Branding</h6>
+      </div>
+      <div class="col-md-3 mb-3">
+        <i class="fas fa-pen-nib fa-2x text-primary mb-2"></i>
+        <h6>Digital Drawing</h6>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <form class="mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</body>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-dark text-light py-4">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <p class="mb-0">&copy; 2025 Bincent De la Peña. All rights reserved.</p>
+      </div>
+      
+      <div class="col-md-6 text-center text-md-end">
+        <a href="#" class="text-primary me-3 fs-5"><i class="fab fa-github"></i></a>
+        
+        <a href="#" class="text-primary fs-5"><i class="fab fa-instagram"></i></a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+
+</html>
