@@ -11,6 +11,7 @@ body {
 /* Main */
 
 
+
 /* General section style */
 section {
   padding-top: 20rem;   /* Increase top padding */
@@ -23,6 +24,7 @@ section {
 /* General section style */
 
 
+
 /* To prevent the section from overplapping in navigation*/
 #about,
 #education,
@@ -33,6 +35,8 @@ section {
   padding-top: 60px;
 }
 /* To prevent the section from overplapping in navigation*/
+
+
 
 /* Hero/Home */
 .hero {
@@ -81,6 +85,7 @@ h1, h2, h3, .hero-name {
 /* Hero/Home */
 
 
+
 /* About Section */
 #about {
   opacity: 0;
@@ -96,6 +101,7 @@ h1, h2, h3, .hero-name {
   }
 }
 /* About Section */
+
 
 
 /* Navigation Bar */
@@ -135,7 +141,40 @@ h1, h2, h3, .hero-name {
 .navbar-toggler {
   border: none;
 }
+/* Navigation Bar */
 
+
+
+/* Underline active nav link */
+.navbar-nav .nav-link {
+  position: relative;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  border-radius: 3px;
+
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link.active {
+  color: #007bff !important;
+}
+
+.navbar-nav .nav-link.active::after {
+  transform: scaleX(1);
+}
+/* Underline active nav link */
 
 
 /* Footer */
