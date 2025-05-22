@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
 // Selection of section links
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
@@ -35,5 +36,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+// Animate progress bar
+document.addEventListener("DOMContentLoaded", () => {
+  const skillsSection = document.querySelector("#skills");
+  const skillFills = document.querySelectorAll(".skill-fill");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        skillFills.forEach(fill => {
+          const width = fill.getAttribute("data-width");
+          fill.style.width = width;
+        });
+        observer.unobserve(skillsSection); // run once
+      }
+    });
+  }, {
+    threshold: 0.3 // trigger when 30% of the section is visible
+  });
+
+  observer.observe(skillsSection);
+});
+
+
+
 
 
