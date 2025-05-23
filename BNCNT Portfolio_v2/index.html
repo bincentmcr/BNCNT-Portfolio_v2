@@ -47,6 +47,9 @@
           <a class="nav-link" href="#skills">Skills</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#services">Services</a>
         </li>
         <li class="nav-item">
@@ -223,8 +226,63 @@
   </div>
 </section>
 
+
+<!-- Portfolio Gallery Section -->
+<section id="portfolio" class="content my-5">
+  <h2 class="text-center mb-4">Portfolio Gallery</h2>
+  <div class="gallery-grid">
+
+    <!-- Gallery Item -->
+    <div class="gallery-card" 
+         data-title="Project Alpha" 
+         data-subtitle="Branding Design" 
+         data-description="A modern branding project for a tech startup focused on clarity and identity.">
+      <img src="peakpx.jpg" alt="Project Alpha" class="gallery-item">
+      <div class="gallery-text">
+        <h5 class="gallery-title">Project Alpha</h5>
+        <p class="gallery-subtitle">Branding Design</p>
+      </div>
+    </div>
+
+    <!-- Another Item -->
+    <div class="gallery-card" 
+         data-title="UI Exploration" 
+         data-subtitle="Mobile App" 
+         data-description="Prototype of a social networking app interface with a clean, modern design.">
+      <img src="images/image2.jpg" alt="UI Exploration" class="gallery-item">
+      <div class="gallery-text">
+        <h5 class="gallery-title">UI Exploration</h5>
+        <p class="gallery-subtitle">Mobile App</p>
+      </div>
+    </div>
+
+    <!-- Add more gallery cards as needed -->
+
+  </div>
+</section>
+
+<!-- Fullscreen Modal -->
+<div class="gallery-modal" id="galleryModal">
+  <span class="gallery-close" id="modalClose">&times;</span>
+  <span class="gallery-swipe-btn gallery-swipe-prev" id="swipePrev">&#8249;</span>
+  <img class="modal-image" id="modalImage" alt="Fullscreen Image">
+  <span class="gallery-swipe-btn gallery-swipe-next" id="swipeNext">&#8250;</span>
+  <div class="modal-meta">
+    <h3 id="modalTitle"></h3>
+    <h5 id="modalSubtitle"></h5>
+    <p class="modal-description" id="modalDescription"></p>
+    <div class="image-details" id="imageDetails"></div>
+  </div>
+</div>
+
+<script src="portfolio-modal.js"></script>
+<link rel="stylesheet" href="portfolio-style.css">
+
+<!-- Portfolio Section Ends here-->
+
+
 <!-- Services -->
-  <section id="services" class="py-5 bg-light">
+  <section id="services">
     <div class="container">
       <h2 class="text-center mb-5">Services</h2>
       <div class="services-grid">
@@ -263,31 +321,67 @@
   </section>
 
 
+<!--Contact Me-->
+<section id="contact" class="content">
+  <h2 style="margin-bottom: 20px;">Contact Me</h2>
+  <div class="row" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+    
+    <!-- Contact Info -->
+<div style="flex: 1; min-width: 300px;">
+  <ul class="contact-info" style="margin-top: 30px;">
+    <li class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <div class="contact-text">
+        <strong>Address:</strong><br>
+        <span class="nowrap">Alitagtag, Batangas, Philippines</span>
+      </div>
+    </li>
+    <li class="contact-item">
+      <i class="fas fa-phone-alt"></i>
+      <div class="contact-text">
+        <strong>Phone:</strong><br>
+        +63906-201-8674
+      </div>
+    </li>
+    <li class="contact-item">
+      <i class="fas fa-paper-plane"></i>
+      <div class="contact-text">
+        <strong>Email:</strong><br>
+        bincentmcr@gmail.com
+      </div>
+    </li>
+    <li class="contact-item">
+      <i class="fas fa-globe"></i>
+      <div class="contact-text">
+        <strong>Website:</strong><br>
+        yoursite.com
+      </div>
+    </li>
+  </ul>
+</div>
 
-<!-- Contact Section -->
-<section id="contact" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Contact Me</h2>
-    <form class="mx-auto" style="max-width: 600px;">
-      <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Your Name" required>
-      </div>
-      <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Your Email" required>
-      </div>
-      <div class="mb-3">
-        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-      </div>
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </div>
-    </form>
+
+    <!-- Contact Form -->
+    <div style="flex: 4; min-width: 300px;"> <!-- Changed flex from 1 to 2 -->
+      <form id="contactForm">
+        <div style="display: flex; gap: 0px 5px;">
+          <input type="text" placeholder="Your Name" class="contact-input" required>
+          <input type="email" placeholder="Your Email" class="contact-input" required>
+        </div>
+        <input type="text" placeholder="Subject" class="contact-input" style="margin-top: 5px;" required>
+        <textarea placeholder="Message" rows="6"  class="contact-textarea"  required></textarea>
+        <button type="submit" class="btn-contact">Send Message</button>
+      </form>
+    </div>
   </div>
 </section>
+<!-- Contact Me Ends Here-->
+
 
 </body>
+<!-- Body Ends Here -->
 
-<!-- Footer -->
+
 <!-- Footer -->
 <footer class="bg-dark text-light py-4">
   <div class="container">
