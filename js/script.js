@@ -154,5 +154,112 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Tab filtering
+document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".tab-btn");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    const moreToggle = document.querySelector(".more-toggle");
 
+    // Filtering logic placeholder
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach((btn) => btn.classList.remove("active"));
+        tab.classList.add("active");
+
+        // Example: add your filtering logic here
+        const filter = tab.getAttribute("data-filter");
+        console.log("Filtering:", filter);
+      });
+    });
+
+    // Clone overflowed tabs to dropdown on mobile
+function setupResponsiveTabs() {
+  const container = document.querySelector(".tab-container");
+  const tabsContainer = container.querySelector(".tabs");
+  const tabButtons = Array.from(tabsContainer.children);
+  const dropdownMenu = container.querySelector(".dropdown-menu");
+  const moreToggle = container.querySelector(".more-toggle");
+
+  // Reset styles and dropdown
+  dropdownMenu.innerHTML = "";
+  tabButtons.forEach(btn => btn.style.display = "inline-block");
+
+  const containerWidth = container.offsetWidth;
+  let usedWidth = 0;
+  let overflowStarted = false;
+
+  for (let i = 0; i < tabButtons.length; i++) {
+    const btn = tabButtons[i];
+    usedWidth += btn.offsetWidth + 8; // include gap
+
+    if (usedWidth + 100 > containerWidth) {
+      overflowStarted = true;
+      dropdownMenu.appendChild(btn.cloneNode(true));
+      btn.style.display = "none";
+    }
+  }
+
+  // Only show the "More" button if overflow tabs exist
+  moreToggle.style.display = dropdownMenu.children.length > 0 ? "inline-block" : "none";
+
+  // Hide dropdown by default
+  dropdownMenu.style.display = "none";
+}
+
+
+    // Toggle dropdown visibility
+    moreToggle.addEventListener("click", () => {
+      dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".more-dropdown")) {
+        dropdownMenu.style.display = "none";
+      }
+    });
+
+    // Handle dropdown button clicks
+    dropdownMenu.addEventListener("click", (e) => {
+      if (e.target.tagName === "BUTTON") {
+        document.querySelectorAll(".tab-btn").forEach((btn) => {
+          btn.classList.remove("active");
+          if (btn.textContent === e.target.textContent) {
+            btn.classList.add("active");
+            btn.click(); // trigger original click
+          }
+        });
+        dropdownMenu.style.display = "none";
+      }
+    });
+
+    // Initial run + resize
+    setupResponsiveTabs();
+    window.addEventListener("resize", setupResponsiveTabs);
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const galleryCards = document.querySelectorAll(".gallery-card");
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // Remove active class from all tabs
+        tabButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.getAttribute("data-filter");
+
+        galleryCards.forEach(card => {
+          const category = card.getAttribute("data-category");
+
+          if (filter === "all" || category === filter) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  });
 
