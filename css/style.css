@@ -61,26 +61,6 @@ h1, h2, h3, .hero-name {
   font-size: 1rem;
 }
 
-.hero-img {
-  max-width: 80%;
-  border-radius: 50%; /* Circular shape */
-  border: 4px solid #007bff; /* Clean blue border */
-  padding: 5px;
-  box-shadow: 0 8px 30px rgba(0, 123, 255, 0.25); /* Soft blue shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  will-change: transform;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); /* subtle lift */
-  background: white;
-  display: inline-block;
-}
-
-.hero-img:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 123, 255, 0.35);
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.15));
-  cursor: pointer;
-}
-
 .btn-primary {
   background-color: #007bff;
   border: 2px solid #007bff;
