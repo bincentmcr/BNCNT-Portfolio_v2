@@ -86,9 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modalSubtitle.textContent = card.dataset.subtitle;
     modalDescription.textContent = card.dataset.description;
 
-    modalImage.onload = () => {
-      imageDetails.textContent = `Dimensions: ${modalImage.naturalWidth}px × ${modalImage.naturalHeight}px`;
-    };
+    modalImage.onload = () => {};
 
     currentIndex = index;
   }
